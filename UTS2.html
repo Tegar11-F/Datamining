@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Decision Tree Classifier (Tugas 6) &#8212; DATA MINING</title>
+    <title>&lt;no title&gt; &#8212; DATA MINING</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="UTS1.html" />
-    <link rel="prev" title="Implementasi K-Means Clustering (Tugas 5)" href="Tugas5.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="UTS1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown Files
@@ -144,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
    Implementasi K-Means Clustering (Tugas 5)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas6.html">
    Decision Tree Classifier (Tugas 6)
   </a>
  </li>
@@ -213,7 +213,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Tugas6.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/UTS2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -273,7 +273,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas6.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUTS2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -301,7 +301,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/Tugas6.ipynb"
+        <a href="_sources/UTS2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -338,23 +338,50 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Decision Tree Classifier (Tugas 6)</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -362,8 +389,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="decision-tree-classifier-tugas-6">
-<h1>Decision Tree Classifier (Tugas 6)<a class="headerlink" href="#decision-tree-classifier-tugas-6" title="Permalink to this headline">#</a></h1>
+  <p>##UTS2(Desision tree)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -404,7 +430,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bedb29d5-d280-481b-91fe-d2e27af03570">
+  <div id="df-3a94400e-4228-486a-9b3b-1083842f1cc8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -505,7 +531,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bedb29d5-d280-481b-91fe-d2e27af03570')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3a94400e-4228-486a-9b3b-1083842f1cc8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -556,12 +582,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bedb29d5-d280-481b-91fe-d2e27af03570 button.colab-df-convert');
+          document.querySelector('#df-3a94400e-4228-486a-9b3b-1083842f1cc8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bedb29d5-d280-481b-91fe-d2e27af03570');
+          const element = document.querySelector('#df-3a94400e-4228-486a-9b3b-1083842f1cc8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -652,7 +678,7 @@ memory usage: 9.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6051247f-e7b6-4c46-9c01-e99dc25addea">
+  <div id="df-6e6e3706-444a-4b0f-80c0-3f50292641a8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -753,7 +779,7 @@ memory usage: 9.2 KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6051247f-e7b6-4c46-9c01-e99dc25addea')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6e6e3706-444a-4b0f-80c0-3f50292641a8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -804,12 +830,12 @@ memory usage: 9.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6051247f-e7b6-4c46-9c01-e99dc25addea button.colab-df-convert');
+          document.querySelector('#df-6e6e3706-444a-4b0f-80c0-3f50292641a8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6051247f-e7b6-4c46-9c01-e99dc25addea');
+          const element = document.querySelector('#df-6e6e3706-444a-4b0f-80c0-3f50292641a8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -832,57 +858,22 @@ memory usage: 9.2 KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Classification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3360</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: &#39;species&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">0646</span><span class="n">f61ac429</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3456</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3457</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3458</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3459</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3460</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3363</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3364</span> 
-<span class="g g-Whitespace">   </span><span class="mi">3365</span>         <span class="k">if</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isna</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasnans</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>: &#39;species&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2    64
+1    52
+Name: Classification, dtype: int64
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;Iris-setosa&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;Iris-versicolor&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;Iris-virginica&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -895,7 +886,7 @@ memory usage: 9.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6e77ec6e-8e0d-4a67-a5ea-d026184de74b">
+  <div id="df-a5ce8df6-6065-4862-8a68-a2898a6ab0e1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -915,53 +906,83 @@ memory usage: 9.2 KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sepal_length</th>
-      <th>sepal_width</th>
-      <th>petal_length</th>
-      <th>petal_width</th>
-      <th>species</th>
+      <th>Age</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
+      <th>Classification</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>0</td>
+      <td>48</td>
+      <td>23.500000</td>
+      <td>70</td>
+      <td>2.707</td>
+      <td>0.467409</td>
+      <td>8.8071</td>
+      <td>9.702400</td>
+      <td>7.99585</td>
+      <td>417.114</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>0</td>
+      <td>83</td>
+      <td>20.690495</td>
+      <td>92</td>
+      <td>3.115</td>
+      <td>0.706897</td>
+      <td>8.8438</td>
+      <td>5.429285</td>
+      <td>4.06405</td>
+      <td>468.786</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>0</td>
+      <td>82</td>
+      <td>23.124670</td>
+      <td>91</td>
+      <td>4.498</td>
+      <td>1.009651</td>
+      <td>17.9393</td>
+      <td>22.432040</td>
+      <td>9.27715</td>
+      <td>554.697</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>0</td>
+      <td>68</td>
+      <td>21.367521</td>
+      <td>77</td>
+      <td>3.226</td>
+      <td>0.612725</td>
+      <td>9.8827</td>
+      <td>7.169560</td>
+      <td>12.76600</td>
+      <td>928.220</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>0</td>
+      <td>86</td>
+      <td>21.111111</td>
+      <td>92</td>
+      <td>3.549</td>
+      <td>0.805386</td>
+      <td>6.6994</td>
+      <td>4.819240</td>
+      <td>10.57635</td>
+      <td>773.920</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -970,52 +991,82 @@ memory usage: 9.2 KB
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
+      <th>111</th>
+      <td>45</td>
+      <td>26.850000</td>
+      <td>92</td>
+      <td>3.330</td>
+      <td>0.755688</td>
+      <td>54.6800</td>
+      <td>12.100000</td>
+      <td>10.96000</td>
+      <td>268.230</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
+      <th>112</th>
+      <td>62</td>
+      <td>26.840000</td>
+      <td>100</td>
+      <td>4.530</td>
+      <td>1.117400</td>
+      <td>12.4500</td>
+      <td>21.420000</td>
+      <td>7.32000</td>
+      <td>330.160</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
+      <th>113</th>
+      <td>65</td>
+      <td>32.050000</td>
+      <td>97</td>
+      <td>5.730</td>
+      <td>1.370998</td>
+      <td>61.4800</td>
+      <td>22.540000</td>
+      <td>10.33000</td>
+      <td>314.050</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
+      <th>114</th>
+      <td>72</td>
+      <td>25.590000</td>
+      <td>82</td>
+      <td>2.820</td>
+      <td>0.570392</td>
+      <td>24.9600</td>
+      <td>33.750000</td>
+      <td>3.27000</td>
+      <td>392.460</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
+      <th>115</th>
+      <td>86</td>
+      <td>27.180000</td>
+      <td>138</td>
+      <td>19.910</td>
+      <td>6.777364</td>
+      <td>90.2800</td>
+      <td>14.110000</td>
+      <td>4.35000</td>
+      <td>90.090</td>
       <td>2</td>
     </tr>
   </tbody>
 </table>
-<p>150 rows × 5 columns</p>
+<p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6e77ec6e-8e0d-4a67-a5ea-d026184de74b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a5ce8df6-6065-4862-8a68-a2898a6ab0e1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1066,12 +1117,12 @@ memory usage: 9.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6e77ec6e-8e0d-4a67-a5ea-d026184de74b button.colab-df-convert');
+          document.querySelector('#df-a5ce8df6-6065-4862-8a68-a2898a6ab0e1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6e77ec6e-8e0d-4a67-a5ea-d026184de74b');
+          const element = document.querySelector('#df-a5ce8df6-6065-4862-8a68-a2898a6ab0e1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1094,15 +1145,14 @@ memory usage: 9.2 KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Classification&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    50
-1    50
-2    50
-Name: species, dtype: int64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2    64
+1    52
+Name: Classification, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1115,17 +1165,22 @@ Name: species, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 150 entries, 0 to 149
-Data columns (total 5 columns):
- #   Column        Non-Null Count  Dtype  
----  ------        --------------  -----  
- 0   sepal_length  150 non-null    float64
- 1   sepal_width   150 non-null    float64
- 2   petal_length  150 non-null    float64
- 3   petal_width   150 non-null    float64
- 4   species       150 non-null    int64  
-dtypes: float64(4), int64(1)
-memory usage: 6.0 KB
+RangeIndex: 116 entries, 0 to 115
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   Age             116 non-null    int64  
+ 1   BMI             116 non-null    float64
+ 2   Glucose         116 non-null    int64  
+ 3   Insulin         116 non-null    float64
+ 4   HOMA            116 non-null    float64
+ 5   Leptin          116 non-null    float64
+ 6   Adiponectin     116 non-null    float64
+ 7   Resistin        116 non-null    float64
+ 8   MCP.1           116 non-null    float64
+ 9   Classification  116 non-null    int64  
+dtypes: float64(7), int64(3)
+memory usage: 9.2 KB
 </pre></div>
 </div>
 </div>
@@ -1139,7 +1194,7 @@ memory usage: 6.0 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f7fc41a4-9cd1-4353-a03c-ce992620743d">
+  <div id="df-af4077c1-ec18-4646-aa53-4c6004c117d8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1159,46 +1214,76 @@ memory usage: 6.0 KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sepal_width</th>
-      <th>petal_length</th>
-      <th>petal_width</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
+      <td>23.500000</td>
+      <td>70</td>
+      <td>2.707</td>
+      <td>0.467409</td>
+      <td>8.8071</td>
+      <td>9.702400</td>
+      <td>7.99585</td>
+      <td>417.114</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
+      <td>20.690495</td>
+      <td>92</td>
+      <td>3.115</td>
+      <td>0.706897</td>
+      <td>8.8438</td>
+      <td>5.429285</td>
+      <td>4.06405</td>
+      <td>468.786</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
+      <td>23.124670</td>
+      <td>91</td>
+      <td>4.498</td>
+      <td>1.009651</td>
+      <td>17.9393</td>
+      <td>22.432040</td>
+      <td>9.27715</td>
+      <td>554.697</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
+      <td>21.367521</td>
+      <td>77</td>
+      <td>3.226</td>
+      <td>0.612725</td>
+      <td>9.8827</td>
+      <td>7.169560</td>
+      <td>12.76600</td>
+      <td>928.220</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
+      <td>21.111111</td>
+      <td>92</td>
+      <td>3.549</td>
+      <td>0.805386</td>
+      <td>6.6994</td>
+      <td>4.819240</td>
+      <td>10.57635</td>
+      <td>773.920</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f7fc41a4-9cd1-4353-a03c-ce992620743d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-af4077c1-ec18-4646-aa53-4c6004c117d8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1249,12 +1334,12 @@ memory usage: 6.0 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f7fc41a4-9cd1-4353-a03c-ce992620743d button.colab-df-convert');
+          document.querySelector('#df-af4077c1-ec18-4646-aa53-4c6004c117d8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f7fc41a4-9cd1-4353-a03c-ce992620743d');
+          const element = document.querySelector('#df-af4077c1-ec18-4646-aa53-4c6004c117d8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1284,7 +1369,7 @@ memory usage: 6.0 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e656e44b-9fde-41f5-956c-f1244c35b58d">
+  <div id="df-732fdbc6-4a3d-4f7e-ad3b-715014fdd469">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1304,34 +1389,34 @@ memory usage: 6.0 KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>species</th>
+      <th>Classification</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e656e44b-9fde-41f5-956c-f1244c35b58d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-732fdbc6-4a3d-4f7e-ad3b-715014fdd469')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1382,12 +1467,12 @@ memory usage: 6.0 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e656e44b-9fde-41f5-956c-f1244c35b58d button.colab-df-convert');
+          document.querySelector('#df-732fdbc6-4a3d-4f7e-ad3b-715014fdd469 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e656e44b-9fde-41f5-956c-f1244c35b58d');
+          const element = document.querySelector('#df-732fdbc6-4a3d-4f7e-ad3b-715014fdd469');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1448,9 +1533,8 @@ memory usage: 6.0 KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10,  0,  0],
-       [ 0,  9,  0],
-       [ 0,  0, 11]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10,  2],
+       [ 0, 12]])
 </pre></div>
 </div>
 </div>
@@ -1464,18 +1548,16 @@ memory usage: 6.0 KB
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       1.00      1.00      1.00        10
-           1       1.00      1.00      1.00         9
-           2       1.00      1.00      1.00        11
+           1       1.00      0.83      0.91        12
+           2       0.86      1.00      0.92        12
 
-    accuracy                           1.00        30
-   macro avg       1.00      1.00      1.00        30
-weighted avg       1.00      1.00      1.00        30
+    accuracy                           0.92        24
+   macro avg       0.93      0.92      0.92        24
+weighted avg       0.93      0.92      0.92        24
 </pre></div>
 </div>
 </div>
 </div>
-<p>Entropy</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">entropy_deci</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -1510,9 +1592,8 @@ weighted avg       1.00      1.00      1.00        30
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10,  0,  0],
-       [ 0,  9,  0],
-       [ 0,  0, 11]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10,  2],
+       [ 0, 12]])
 </pre></div>
 </div>
 </div>
@@ -1526,18 +1607,16 @@ weighted avg       1.00      1.00      1.00        30
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       1.00      1.00      1.00        10
-           1       1.00      1.00      1.00         9
-           2       1.00      1.00      1.00        11
+           1       1.00      0.83      0.91        12
+           2       0.86      1.00      0.92        12
 
-    accuracy                           1.00        30
-   macro avg       1.00      1.00      1.00        30
-weighted avg       1.00      1.00      1.00        30
+    accuracy                           0.92        24
+   macro avg       0.93      0.92      0.92        24
+weighted avg       0.93      0.92      0.92        24
 </pre></div>
 </div>
 </div>
 </div>
-<p>Gini Index</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
@@ -1552,24 +1631,36 @@ weighted avg       1.00      1.00      1.00        30
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.34615384615384615, 0.9, &#39;X[2] &lt;= 0.8\ngini = 0.667\nsamples = 120\nvalue = [40, 41, 39]&#39;),
- Text(0.2692307692307692, 0.7, &#39;gini = 0.0\nsamples = 40\nvalue = [40, 0, 0]&#39;),
- Text(0.4230769230769231, 0.7, &#39;X[1] &lt;= 4.75\ngini = 0.5\nsamples = 80\nvalue = [0, 41, 39]&#39;),
- Text(0.15384615384615385, 0.5, &#39;X[2] &lt;= 1.45\ngini = 0.053\nsamples = 37\nvalue = [0, 36, 1]&#39;),
- Text(0.07692307692307693, 0.3, &#39;gini = 0.0\nsamples = 29\nvalue = [0, 29, 0]&#39;),
- Text(0.23076923076923078, 0.3, &#39;X[0] &lt;= 3.05\ngini = 0.219\nsamples = 8\nvalue = [0, 7, 1]&#39;),
- Text(0.15384615384615385, 0.1, &#39;gini = 0.32\nsamples = 5\nvalue = [0, 4, 1]&#39;),
- Text(0.3076923076923077, 0.1, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 3, 0]&#39;),
- Text(0.6923076923076923, 0.5, &#39;X[2] &lt;= 1.75\ngini = 0.206\nsamples = 43\nvalue = [0, 5, 38]&#39;),
- Text(0.5384615384615384, 0.3, &#39;X[1] &lt;= 5.05\ngini = 0.5\nsamples = 8\nvalue = [0, 4, 4]&#39;),
- Text(0.46153846153846156, 0.1, &#39;gini = 0.375\nsamples = 4\nvalue = [0, 3, 1]&#39;),
- Text(0.6153846153846154, 0.1, &#39;gini = 0.375\nsamples = 4\nvalue = [0, 1, 3]&#39;),
- Text(0.8461538461538461, 0.3, &#39;X[1] &lt;= 4.85\ngini = 0.056\nsamples = 35\nvalue = [0, 1, 34]&#39;),
- Text(0.7692307692307693, 0.1, &#39;gini = 0.444\nsamples = 3\nvalue = [0, 1, 2]&#39;),
- Text(0.9230769230769231, 0.1, &#39;gini = 0.0\nsamples = 32\nvalue = [0, 0, 32]&#39;)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.47619047619047616, 0.9166666666666666, &#39;X[1] &lt;= 91.5\ngini = 0.491\nsamples = 92\nvalue = [40, 52]&#39;),
+ Text(0.21428571428571427, 0.75, &#39;X[2] &lt;= 3.793\ngini = 0.432\nsamples = 38\nvalue = [26, 12]&#39;),
+ Text(0.09523809523809523, 0.5833333333333334, &#39;X[6] &lt;= 13.163\ngini = 0.375\nsamples = 8\nvalue = [2, 6]&#39;),
+ Text(0.047619047619047616, 0.4166666666666667, &#39;gini = 0.5\nsamples = 4\nvalue = [2, 2]&#39;),
+ Text(0.14285714285714285, 0.4166666666666667, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4]&#39;),
+ Text(0.3333333333333333, 0.5833333333333334, &#39;X[6] &lt;= 14.227\ngini = 0.32\nsamples = 30\nvalue = [24, 6]&#39;),
+ Text(0.23809523809523808, 0.4166666666666667, &#39;X[2] &lt;= 14.391\ngini = 0.111\nsamples = 17\nvalue = [16, 1]&#39;),
+ Text(0.19047619047619047, 0.25, &#39;gini = 0.0\nsamples = 14\nvalue = [14, 0]&#39;),
+ Text(0.2857142857142857, 0.25, &#39;gini = 0.444\nsamples = 3\nvalue = [2, 1]&#39;),
+ Text(0.42857142857142855, 0.4166666666666667, &#39;X[0] &lt;= 31.124\ngini = 0.473\nsamples = 13\nvalue = [8, 5]&#39;),
+ Text(0.38095238095238093, 0.25, &#39;X[5] &lt;= 7.537\ngini = 0.278\nsamples = 6\nvalue = [1, 5]&#39;),
+ Text(0.3333333333333333, 0.08333333333333333, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 3]&#39;),
+ Text(0.42857142857142855, 0.08333333333333333, &#39;gini = 0.444\nsamples = 3\nvalue = [1, 2]&#39;),
+ Text(0.47619047619047616, 0.25, &#39;gini = 0.0\nsamples = 7\nvalue = [7, 0]&#39;),
+ Text(0.7380952380952381, 0.75, &#39;X[4] &lt;= 7.24\ngini = 0.384\nsamples = 54\nvalue = [14, 40]&#39;),
+ Text(0.6904761904761905, 0.5833333333333334, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0]&#39;),
+ Text(0.7857142857142857, 0.5833333333333334, &#39;X[4] &lt;= 55.591\ngini = 0.338\nsamples = 51\nvalue = [11, 40]&#39;),
+ Text(0.6666666666666666, 0.4166666666666667, &#39;X[6] &lt;= 11.927\ngini = 0.268\nsamples = 44\nvalue = [7, 37]&#39;),
+ Text(0.5714285714285714, 0.25, &#39;X[6] &lt;= 8.31\ngini = 0.386\nsamples = 23\nvalue = [6, 17]&#39;),
+ Text(0.5238095238095238, 0.08333333333333333, &#39;gini = 0.153\nsamples = 12\nvalue = [1, 11]&#39;),
+ Text(0.6190476190476191, 0.08333333333333333, &#39;gini = 0.496\nsamples = 11\nvalue = [5, 6]&#39;),
+ Text(0.7619047619047619, 0.25, &#39;X[5] &lt;= 3.924\ngini = 0.091\nsamples = 21\nvalue = [1, 20]&#39;),
+ Text(0.7142857142857143, 0.08333333333333333, &#39;gini = 0.444\nsamples = 3\nvalue = [1, 2]&#39;),
+ Text(0.8095238095238095, 0.08333333333333333, &#39;gini = 0.0\nsamples = 18\nvalue = [0, 18]&#39;),
+ Text(0.9047619047619048, 0.4166666666666667, &#39;X[5] &lt;= 7.721\ngini = 0.49\nsamples = 7\nvalue = [4, 3]&#39;),
+ Text(0.8571428571428571, 0.25, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0]&#39;),
+ Text(0.9523809523809523, 0.25, &#39;gini = 0.375\nsamples = 4\nvalue = [1, 3]&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas6_30_1.png" src="_images/Tugas6_30_1.png" />
+<img alt="_images/UTS2_28_1.png" src="_images/UTS2_28_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1579,27 +1670,32 @@ weighted avg       1.00      1.00      1.00        30
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.34615384615384615, 0.9, &#39;X[2] &lt;= 0.8\nentropy = 1.585\nsamples = 120\nvalue = [40, 41, 39]&#39;),
- Text(0.2692307692307692, 0.7, &#39;entropy = 0.0\nsamples = 40\nvalue = [40, 0, 0]&#39;),
- Text(0.4230769230769231, 0.7, &#39;X[1] &lt;= 4.75\nentropy = 1.0\nsamples = 80\nvalue = [0, 41, 39]&#39;),
- Text(0.15384615384615385, 0.5, &#39;X[2] &lt;= 1.45\nentropy = 0.179\nsamples = 37\nvalue = [0, 36, 1]&#39;),
- Text(0.07692307692307693, 0.3, &#39;entropy = 0.0\nsamples = 29\nvalue = [0, 29, 0]&#39;),
- Text(0.23076923076923078, 0.3, &#39;X[0] &lt;= 3.05\nentropy = 0.544\nsamples = 8\nvalue = [0, 7, 1]&#39;),
- Text(0.15384615384615385, 0.1, &#39;entropy = 0.722\nsamples = 5\nvalue = [0, 4, 1]&#39;),
- Text(0.3076923076923077, 0.1, &#39;entropy = 0.0\nsamples = 3\nvalue = [0, 3, 0]&#39;),
- Text(0.6923076923076923, 0.5, &#39;X[2] &lt;= 1.75\nentropy = 0.519\nsamples = 43\nvalue = [0, 5, 38]&#39;),
- Text(0.5384615384615384, 0.3, &#39;X[1] &lt;= 5.05\nentropy = 1.0\nsamples = 8\nvalue = [0, 4, 4]&#39;),
- Text(0.46153846153846156, 0.1, &#39;entropy = 0.811\nsamples = 4\nvalue = [0, 3, 1]&#39;),
- Text(0.6153846153846154, 0.1, &#39;entropy = 0.811\nsamples = 4\nvalue = [0, 1, 3]&#39;),
- Text(0.8461538461538461, 0.3, &#39;X[1] &lt;= 4.85\nentropy = 0.187\nsamples = 35\nvalue = [0, 1, 34]&#39;),
- Text(0.7692307692307693, 0.1, &#39;entropy = 0.918\nsamples = 3\nvalue = [0, 1, 2]&#39;),
- Text(0.9230769230769231, 0.1, &#39;entropy = 0.0\nsamples = 32\nvalue = [0, 0, 32]&#39;)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5769230769230769, 0.9166666666666666, &#39;X[1] &lt;= 91.5\nentropy = 0.988\nsamples = 92\nvalue = [40, 52]&#39;),
+ Text(0.38461538461538464, 0.75, &#39;X[0] &lt;= 31.124\nentropy = 0.9\nsamples = 38\nvalue = [26, 12]&#39;),
+ Text(0.3076923076923077, 0.5833333333333334, &#39;X[6] &lt;= 13.248\nentropy = 0.991\nsamples = 27\nvalue = [15, 12]&#39;),
+ Text(0.15384615384615385, 0.4166666666666667, &#39;X[2] &lt;= 3.793\nentropy = 0.672\nsamples = 17\nvalue = [14, 3]&#39;),
+ Text(0.07692307692307693, 0.25, &#39;entropy = 1.0\nsamples = 4\nvalue = [2, 2]&#39;),
+ Text(0.23076923076923078, 0.25, &#39;X[2] &lt;= 6.83\nentropy = 0.391\nsamples = 13\nvalue = [12, 1]&#39;),
+ Text(0.15384615384615385, 0.08333333333333333, &#39;entropy = 0.0\nsamples = 10\nvalue = [10, 0]&#39;),
+ Text(0.3076923076923077, 0.08333333333333333, &#39;entropy = 0.918\nsamples = 3\nvalue = [2, 1]&#39;),
+ Text(0.46153846153846156, 0.4166666666666667, &#39;X[4] &lt;= 28.041\nentropy = 0.469\nsamples = 10\nvalue = [1, 9]&#39;),
+ Text(0.38461538461538464, 0.25, &#39;entropy = 0.0\nsamples = 7\nvalue = [0, 7]&#39;),
+ Text(0.5384615384615384, 0.25, &#39;entropy = 0.918\nsamples = 3\nvalue = [1, 2]&#39;),
+ Text(0.46153846153846156, 0.5833333333333334, &#39;entropy = 0.0\nsamples = 11\nvalue = [11, 0]&#39;),
+ Text(0.7692307692307693, 0.75, &#39;X[4] &lt;= 7.24\nentropy = 0.826\nsamples = 54\nvalue = [14, 40]&#39;),
+ Text(0.6923076923076923, 0.5833333333333334, &#39;entropy = 0.0\nsamples = 3\nvalue = [3, 0]&#39;),
+ Text(0.8461538461538461, 0.5833333333333334, &#39;X[1] &lt;= 111.0\nentropy = 0.752\nsamples = 51\nvalue = [11, 40]&#39;),
+ Text(0.7692307692307693, 0.4166666666666667, &#39;X[4] &lt;= 63.703\nentropy = 0.839\nsamples = 41\nvalue = [11, 30]&#39;),
+ Text(0.6923076923076923, 0.25, &#39;X[6] &lt;= 20.361\nentropy = 0.742\nsamples = 38\nvalue = [8, 30]&#39;),
+ Text(0.6153846153846154, 0.08333333333333333, &#39;entropy = 0.863\nsamples = 28\nvalue = [8, 20]&#39;),
+ Text(0.7692307692307693, 0.08333333333333333, &#39;entropy = 0.0\nsamples = 10\nvalue = [0, 10]&#39;),
+ Text(0.8461538461538461, 0.25, &#39;entropy = 0.0\nsamples = 3\nvalue = [3, 0]&#39;),
+ Text(0.9230769230769231, 0.4166666666666667, &#39;entropy = 0.0\nsamples = 10\nvalue = [0, 10]&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas6_31_1.png" src="_images/Tugas6_31_1.png" />
+<img alt="_images/UTS2_29_1.png" src="_images/UTS2_29_1.png" />
 </div>
 </div>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1628,17 +1724,17 @@ weighted avg       1.00      1.00      1.00        30
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Tugas5.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="UTS1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Implementasi K-Means Clustering (Tugas 5)</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="UTS1.html" title="next page">
+    <a class='right-next' id="next-link" href="markdown-notebooks.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
