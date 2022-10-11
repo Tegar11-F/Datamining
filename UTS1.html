@@ -404,21 +404,21 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datacancerurl</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/Tegar11-F/Data-Set/main/Breast%2BCancer%2BCoimbra.csv&quot;</span>
-<span class="n">datacancer</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datacancerurl</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/Tegar11-F/Data-Set/main/Breast%2BCancer%2BCoimbra.csv&quot;</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datacancer</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0563c0c8-7f85-4d98-8cad-16c2e7af53b2">
+  <div id="df-b1293602-b377-4c37-af36-c9b91b2f5bde">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -519,7 +519,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0563c0c8-7f85-4d98-8cad-16c2e7af53b2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b1293602-b377-4c37-af36-c9b91b2f5bde')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -570,12 +570,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0563c0c8-7f85-4d98-8cad-16c2e7af53b2 button.colab-df-convert');
+          document.querySelector('#df-b1293602-b377-4c37-af36-c9b91b2f5bde button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0563c0c8-7f85-4d98-8cad-16c2e7af53b2');
+          const element = document.querySelector('#df-b1293602-b377-4c37-af36-c9b91b2f5bde');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -599,7 +599,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#periksa jumlah baris dan kolom dalam dataset</span>
-<span class="n">datacancer</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
@@ -611,28 +611,30 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">29</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(29, 10)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pilih data menjadi variabel independen &#39;X&#39; dan variabel &#39;Y&#39;</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="c1">#ATAU</span>
+<span class="c1">#X=df.drop(&quot;Klasifikasi&quot;, sumbu=1)</span>
+<span class="c1">#Y=df[&quot;Klasifikasi&quot;]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#buat kerangka data dengan semua data pelatihan kecuali kolom target</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">datacancer</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Classification&#39;</span><span class="p">])</span>
-<span class="c1">#periksa apakah variabel target telah dihapus</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Jika ada yang melihat data dengan fitur (X)</span>
+<span class="n">all_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="s1">&#39;Glucose&#39;</span><span class="p">,</span> <span class="s1">&#39;Insulin&#39;</span><span class="p">,</span> <span class="s1">&#39;HOMA&#39;</span><span class="p">,</span> <span class="s1">&#39;Leptin&#39;</span><span class="p">,</span> <span class="s1">&#39;Adiponectin&#39;</span><span class="p">,</span><span class="s1">&#39;Resistin&#39;</span><span class="p">,</span> <span class="s1">&#39;MCP.1&#39;</span><span class="p">]</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">all_columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">all_columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span>
 <span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aca99be7-4753-4761-b5cc-1f12ff210b1f">
+  <div id="df-12413570-938f-4032-aeb0-3a9c194a40cb">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -666,9 +668,9 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>48</td>
+      <td>48.0</td>
       <td>23.500000</td>
-      <td>70</td>
+      <td>70.0</td>
       <td>2.707</td>
       <td>0.467409</td>
       <td>8.8071</td>
@@ -678,9 +680,9 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>1</th>
-      <td>83</td>
+      <td>83.0</td>
       <td>20.690495</td>
-      <td>92</td>
+      <td>92.0</td>
       <td>3.115</td>
       <td>0.706897</td>
       <td>8.8438</td>
@@ -690,9 +692,9 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>2</th>
-      <td>82</td>
+      <td>82.0</td>
       <td>23.124670</td>
-      <td>91</td>
+      <td>91.0</td>
       <td>4.498</td>
       <td>1.009651</td>
       <td>17.9393</td>
@@ -702,9 +704,9 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>3</th>
-      <td>68</td>
+      <td>68.0</td>
       <td>21.367521</td>
-      <td>77</td>
+      <td>77.0</td>
       <td>3.226</td>
       <td>0.612725</td>
       <td>9.8827</td>
@@ -714,9 +716,9 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>4</th>
-      <td>86</td>
+      <td>86.0</td>
       <td>21.111111</td>
-      <td>92</td>
+      <td>92.0</td>
       <td>3.549</td>
       <td>0.805386</td>
       <td>6.6994</td>
@@ -727,7 +729,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aca99be7-4753-4761-b5cc-1f12ff210b1f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-12413570-938f-4032-aeb0-3a9c194a40cb')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -778,12 +780,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aca99be7-4753-4761-b5cc-1f12ff210b1f button.colab-df-convert');
+          document.querySelector('#df-12413570-938f-4032-aeb0-3a9c194a40cb button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aca99be7-4753-4761-b5cc-1f12ff210b1f');
+          const element = document.querySelector('#df-12413570-938f-4032-aeb0-3a9c194a40cb');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -806,10 +808,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#nilai target terpisah</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">datacancer</span><span class="p">[</span><span class="s1">&#39;Classification&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-<span class="c1">#view target values</span>
-<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">116</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span><span class="p">[:]</span>
 </pre></div>
 </div>
 </div>
@@ -826,53 +825,59 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="c1">#bagi dataset menjadi data latih dan uji</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pisahkan dataset menjadi 80% set Pelatihan dan 20% set Pengujian</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Penskalaan Fitur</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.90580006, -0.60223851,  0.39996142,  5.41266386,  3.97788424,
+        -0.48294549,  1.01615946, -0.73302693, -0.83359765],
+       [-1.1590937 , -0.01445999,  0.26128133, -0.79254154, -0.59226514,
+        -0.67908362, -0.50242597,  0.88574816, -0.67899565],
+       [-0.84247665, -0.17399633, -0.24721234, -0.69308636, -0.54932947,
+         1.38357642,  0.36413531, -0.29126418, -0.75855465],
+       [ 0.9939022 ,  0.19135671, -0.43211912, -0.72830546, -0.58107469,
+         0.17960335, -0.36087967,  0.28699465,  0.21358775],
+       [ 0.93057879, -1.15834447, -0.01607885, -0.69087133, -0.53504167,
+        -1.18263566,  0.08029698, -0.65683654, -1.17843428]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">models</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">Y_train</span><span class="p">):</span>
+  
+  <span class="c1">#Menggunakan Metode KNeighborsClassifier dari kelas tetangga untuk menggunakan algoritma Nearest Neighbor</span>
+  <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+  <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">metric</span> <span class="o">=</span> <span class="s1">&#39;minkowski&#39;</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
 
-<span class="c1"># Buat pengklasifikasi KNN</span>
-<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
-<span class="c1"># Sesuaikan pengklasifikasi dengan data</span>
-<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+    
+  <span class="c1">#mencetak akurasi model pada data pelatihan.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">knn</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">Y_train</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=6)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#tampilkan 29 prediksi model pertama pada data uji</span>
-<span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">29</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 2,
-       2, 2])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#periksa keakuratan model kami pada data uji</span>
-<span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3333333333333333
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8260869565217391
 </pre></div>
 </div>
 </div>
