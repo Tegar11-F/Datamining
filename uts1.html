@@ -402,7 +402,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b9e752e8-277f-4a2f-8d8b-686e8c114db6">
+  <div id="df-e7ba1107-0d9f-4752-a890-0f50fae3b0d4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -503,7 +503,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b9e752e8-277f-4a2f-8d8b-686e8c114db6')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e7ba1107-0d9f-4752-a890-0f50fae3b0d4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -554,12 +554,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b9e752e8-277f-4a2f-8d8b-686e8c114db6 button.colab-df-convert');
+          document.querySelector('#df-e7ba1107-0d9f-4752-a890-0f50fae3b0d4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b9e752e8-277f-4a2f-8d8b-686e8c114db6');
+          const element = document.querySelector('#df-e7ba1107-0d9f-4752-a890-0f50fae3b0d4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -618,7 +618,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6a252cd3-c9e7-4669-b9f5-27420529c688">
+  <div id="df-3de65163-445d-4eaf-a887-2147e8ed3f2b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -713,7 +713,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6a252cd3-c9e7-4669-b9f5-27420529c688')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3de65163-445d-4eaf-a887-2147e8ed3f2b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -764,12 +764,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6a252cd3-c9e7-4669-b9f5-27420529c688 button.colab-df-convert');
+          document.querySelector('#df-3de65163-445d-4eaf-a887-2147e8ed3f2b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6a252cd3-c9e7-4669-b9f5-27420529c688');
+          const element = document.querySelector('#df-3de65163-445d-4eaf-a887-2147e8ed3f2b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -862,6 +862,41 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8260869565217391
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">recall_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">plot_roc_curve</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">balanced_accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model &#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+  <span class="c1">#Check Accuracy precision, recall, f1-score</span>
+  <span class="nb">print</span><span class="p">(</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">model</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span> <span class="p">)</span>
+  <span class="c1">#Another way to get the models accuracy on the test data</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">F</span><span class="s1">&#39;Accuracy:&#39;</span><span class="p">,</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">model</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">TypeError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">b64836ecebf7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">balanced_accuracy_score</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="p">)):</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model &#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>   <span class="c1">#Check Accuracy precision, recall, f1-score</span>
+
+<span class="ne">TypeError</span>: object of type &#39;KNeighborsClassifier&#39; has no len()
 </pre></div>
 </div>
 </div>
