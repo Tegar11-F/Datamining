@@ -160,6 +160,26 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Tugas8.html">
+   Implementasi Naive Bayes Studi Kasus Peminjaman Uang  (Tugas 8)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas9.html">
+   Best Accuracy Between Normalization vs Unnomarlization  (Tugas 9)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas10.html">
+   Tugas 10
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="esemble-.html">
+   Ensamble Stacking (Tugas 12)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="markdown-notebooks.html">
    Notebooks with MyST Markdown
   </a>
@@ -402,7 +422,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-48e40578-26e4-4b28-8f1b-9a2dfe36c9a0">
+  <div id="df-af66ac84-2b92-4398-921b-3287a0ff3614">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -673,7 +693,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-48e40578-26e4-4b28-8f1b-9a2dfe36c9a0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-af66ac84-2b92-4398-921b-3287a0ff3614')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -724,12 +744,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-48e40578-26e4-4b28-8f1b-9a2dfe36c9a0 button.colab-df-convert');
+          document.querySelector('#df-af66ac84-2b92-4398-921b-3287a0ff3614 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-48e40578-26e4-4b28-8f1b-9a2dfe36c9a0');
+          const element = document.querySelector('#df-af66ac84-2b92-4398-921b-3287a0ff3614');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -774,7 +794,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-efec48e4-a994-4138-9890-a306849f9ae1">
+  <div id="df-c6821c62-5a0b-43fb-a68f-97338fa09f12">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -839,7 +859,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-efec48e4-a994-4138-9890-a306849f9ae1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c6821c62-5a0b-43fb-a68f-97338fa09f12')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -890,12 +910,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-efec48e4-a994-4138-9890-a306849f9ae1 button.colab-df-convert');
+          document.querySelector('#df-c6821c62-5a0b-43fb-a68f-97338fa09f12 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-efec48e4-a994-4138-9890-a306849f9ae1');
+          const element = document.querySelector('#df-c6821c62-5a0b-43fb-a68f-97338fa09f12');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -952,14 +972,14 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 
 <span class="c1"># Buat pengklasifikasi KNN</span>
-<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="c1"># Sesuaikan pengklasifikasi dengan data</span>
 <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=3)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=2)
 </pre></div>
 </div>
 </div>
