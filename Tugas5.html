@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Implementasi K-Means Clustering (Tugas 5) &#8212; DATA MINING</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -439,9 +438,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="implementasi-k-means-clustering-tugas-5">
+  <div class="tex2jax_ignore mathjax_ignore section" id="implementasi-k-means-clustering-tugas-5">
 <h1>Implementasi K-Means Clustering (Tugas 5)<a class="headerlink" href="#implementasi-k-means-clustering-tugas-5" title="Permalink to this headline">#</a></h1>
-<section id="persiapan">
+<div class="section" id="persiapan">
 <h2>Persiapan<a class="headerlink" href="#persiapan" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Impor <em>train_test_split</em> dari <em>sklearn</em></p></li>
@@ -477,7 +476,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-05008806-2eef-4faf-88ac-9589a4602837">
+  <div id="df-0ee618f8-60d3-489c-8347-5ea593d26c2d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -548,7 +547,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-05008806-2eef-4faf-88ac-9589a4602837')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0ee618f8-60d3-489c-8347-5ea593d26c2d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -599,12 +598,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-05008806-2eef-4faf-88ac-9589a4602837 button.colab-df-convert');
+          document.querySelector('#df-0ee618f8-60d3-489c-8347-5ea593d26c2d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-05008806-2eef-4faf-88ac-9589a4602837');
+          const element = document.querySelector('#df-0ee618f8-60d3-489c-8347-5ea593d26c2d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -638,8 +637,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="hitung-data">
+</div>
+<div class="section" id="hitung-data">
 <h2>Hitung Data<a class="headerlink" href="#hitung-data" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Pisahkan <em>feature</em> “variety” dari <em>dataframe</em></p></li>
@@ -657,7 +656,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bf6c0820-0a7e-46ab-ac23-02a4dbc4a988">
+  <div id="df-04933618-d288-43a1-bdfb-bb1f63bcdefe">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -765,7 +764,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bf6c0820-0a7e-46ab-ac23-02a4dbc4a988')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-04933618-d288-43a1-bdfb-bb1f63bcdefe')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -816,12 +815,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bf6c0820-0a7e-46ab-ac23-02a4dbc4a988 button.colab-df-convert');
+          document.querySelector('#df-04933618-d288-43a1-bdfb-bb1f63bcdefe button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bf6c0820-0a7e-46ab-ac23-02a4dbc4a988');
+          const element = document.querySelector('#df-04933618-d288-43a1-bdfb-bb1f63bcdefe');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -901,9 +900,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6.06      , 2.82      , 4.644     , 1.568     ],
-       [5.00566038, 3.36981132, 1.56037736, 0.29056604],
-       [7.12272727, 3.11363636, 6.03181818, 2.13181818]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6.50666667, 2.96266667, 5.24266667, 1.83333333],
+       [5.006     , 3.428     , 1.462     , 0.246     ],
+       [5.528     , 2.6       , 3.896     , 1.204     ]])
 </pre></div>
 </div>
 </div>
@@ -923,7 +922,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bbd014c7-f718-4e6b-81cf-9e23560c82ba">
+  <div id="df-571cb1ec-d1f0-4ab2-8129-fea335e51ecc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -973,7 +972,7 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>145</th>
-      <td>2</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>146</th>
@@ -985,7 +984,7 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>148</th>
-      <td>2</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>149</th>
@@ -995,7 +994,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bbd014c7-f718-4e6b-81cf-9e23560c82ba')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-571cb1ec-d1f0-4ab2-8129-fea335e51ecc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1046,12 +1045,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bbd014c7-f718-4e6b-81cf-9e23560c82ba button.colab-df-convert');
+          document.querySelector('#df-571cb1ec-d1f0-4ab2-8129-fea335e51ecc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bbd014c7-f718-4e6b-81cf-9e23560c82ba');
+          const element = document.querySelector('#df-571cb1ec-d1f0-4ab2-8129-fea335e51ecc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1416,8 +1415,8 @@ title="Print to PDF"
 <img alt="_images/Tugas5_17_0.png" src="_images/Tugas5_17_0.png" />
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1431,7 +1430,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
